@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghizlane Prestige — Cake Artiste · Instructrice Cake Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   CSS VARIABLES & RESET
+   ============================================================ */
+:root{
+  --cream:#fff7ef;
+  --ivory:#fffdf9;
+  --rose:#e91e63;
+  --rose-dark:#2b0d14;
+  --gold:#d4af37;
+  --rosegold:#c98a6b;
+  --text-dark:#1d0b10;
+  --text-mid:#3b2024;
+  --white:#ffffff;
+  --font-display:'Playfair Display','Cormorant Garamond',serif;
+  --font-body:'Montserrat','Jost',sans-serif;
+  --font-ar:'Cairo','Tajawal',sans-serif;
+  --transition:all .45s ease;
+  --radius:22px;
+}
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  background:var(--cream);
+  color:var(--text-dark);
+  font-family:var(--font-body);
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+body.ar{font-family:var(--font-ar);}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;border:none;background:none;font-family:inherit;}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--ivory)}
+::-webkit-scrollbar-thumb{background:var(--rosegold-light);border-radius:10px}
+
+/* ============================================================
+   INTRO CINEMATIC
+   ============================================================ */
+#intro{
+  isolation:isolate;
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  background:
+    radial-gradient(circle at center,rgba(120,15,55,.35),transparent 38%),
+    linear-gradient(135deg,#050204,#13070c,#000);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.intro-logo{
+  color:#fff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  z-index:99999 !important;
+  position:relative !important;
+}
+
+
+.intro-logo span{
+  color:#b51655;
+  font-style:italic;
+  text-shadow:
+    0 0 12px rgba(181,22,85,.9),
+    0 0 35px rgba(181,22,85,.45);
+}
+
+.intro-line{
+  width:150px;
+  height:1px;
+  margin:26px auto 20px;
+  background:linear-gradient(to right,transparent,#b51655,transparent);
+}
+
+.intro-sub{
+  color:#d8a0b8;
+  letter-spacing:.45em;
+  text-transform:uppercase;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+#header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:72px;
+  padding:0 38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(255,248,245,0.72);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(201,149,110,0.12);
+  box-shadow:none;
+  transition:all .35s ease;
+}
+
+#header.scrolled{
+  background:rgba(255,248,245,0.95);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 8px 35px rgba(80,45,35,0.10);
+}
+
+.header-logo{
+  font-family:var(--font-display);
+  font-size:1.45rem;
+  font-weight:500;
+  letter-spacing:0.13em;
+  color:var(--text-dark);
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.header-logo span{color:var(--rosegold);}
+
+.header-nav{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  list-style:none;
+}
+
+.header-nav a{
+  font-size:0.74rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--text-dark);
+  opacity:.78;
+  position:relative;
+  transition:.3s;
+}
+
+.header-nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:1px;
+  background:var(--rosegold);
+  transition:.3s;
+}
+
+.header-nav a:hover{
+  color:var(--rosegold);
+  opacity:1;
+}
+
+.header-nav a:hover::after{width:100%;}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.btn-cmd{
+  padding:11px 24px;
+  border-radius:50px;
+  background:linear-gradient(135deg,var(--rosegold),var(--brown-soft));
+  color:#fff;
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  box-shadow:0 8px 25px rgba(201,149,110,.28);
+}
+
+.lang-btns{
+  display:flex;
+  gap:7px;
+  align-items:center;
+}
+
+.lang-btn{
+  padding:8px 13px;
+  border-radius:50px;
+  border:1px solid rgba(201,149,110,.45);
+  background:rgba(255,255,255,.35);
+  color:var(--text-dark);
+  font-size:.72rem;
+}
+
+.lang-btn.active{
+  background:var(--rosegold);
+  color:white;
+}
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:24px;
+  height:1.5px;
+  background:var(--text-dark);
+}
+
+.mobile-menu{
+  position:fixed;
+  top:72px;
+  left:0;
+  right:0;
+  z-index:999;
+  background:rgba(255,248,245,.97);
+  backdrop-filter:blur(18px);
+  padding:24px 34px 32px;
+  display:none;
+  flex-direction:column;
+  border-bottom:1px solid rgba(201,149,110,.14);
+}
+
+.mobile-menu.open{display:flex;}
+
+.mobile-menu a{
+  padding:15px 0;
+  color:var(--text-dark);
+  font-size:.86rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  border-bottom:1px solid rgba(201,149,110,.10);
+}
+
+/* IMPORTANT: باش نحيدو الضبابة اللي فوق الصورة */
+.hero::before,
+.hero::after,
+.hero-overlay{
+  background:linear-gradient(
+    180deg,
+    rgba(255,245,242,0.10) 0%,
+    rgba(255,245,242,0.06) 35%,
+    rgba(255,245,242,0.12) 100%
+  ) !important;
+  opacity:1 !important;
+}
+
+.hero img,
+.hero-slide img,
+.hero-bg img{
+  filter:none !important;
+  opacity:1 !important;
+}
+/* ============================================================
+   SECTION COMMON
+   ============================================================ */
+section{padding:100px 0;}
+.container{max-width:1260px;margin:0 auto;padding:0 40px;}
+.section-label{
+  font-size:0.7rem;font-weight:500;letter-spacing:0.4em;
+  text-transform:uppercase;color:var(--rosegold);
+  display:block;margin-bottom:16px;
+}
+.section-title{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:400;
+  line-height:1.15;
+  color:var(--text-dark);
+}
+.section-title em{font-style:italic;color:var(--rose);}
+.section-line{
+  width:60px;height:1px;
+  background:linear-gradient(90deg,var(--rosegold),var(--petal));
+  margin:24px 0 40px;
+}
+.section-line.center{margin:24px auto 40px;}
+
+/* ============================================================
+   LUXURY CARD BASE
+   ============================================================ */
+.lux-img{
+  position:relative;overflow:hidden;border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light),var(--petal));
+  box-shadow:var(--shadow-pink);
+}
+.lux-img::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.3) 0%,transparent 50%,rgba(201,149,110,0.1) 100%);
+  z-index:1;pointer-events:none;
+}
+.lux-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 0.7s cubic-bezier(0.25,0.8,0.25,1);
+  display:block;
+}
+.lux-img:hover img{transform:scale(1.06);}
+.shimmer{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.25) 50%,transparent 60%);
+  background-size:200% 100%;
+  animation:shimmer 3s infinite;
+}
+@keyframes shimmer{
+  0%{background-position:200% 0}
+  100%{background-position:-200% 0}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero{
+  min-height:100vh;position:relative;
+  display:flex;align-items:center;
+  overflow:hidden;padding:0;
+  background:linear-gradient(160deg,var(--cream) 0%,#f3e4dc 50%,var(--ivory) 100%);
+}
+.hero-slider{
+  position:absolute;inset:0;z-index:0;
+}
+.hero-slide{
+  position:absolute;inset:0;opacity:0;
+  transition:opacity 1.8s ease;
+}
+.hero-slide.active{opacity:1;}
+.hero-slide img{
+  width:100%;height:100%;object-fit:cover;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(253,248,242,0.92) 0%,rgba(253,248,242,0.75) 45%,rgba(253,248,242,0.25) 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  max-width:700px;
+  padding:140px 40px 100px 80px;
+}
+.hero-label{
+  font-size:0.72rem;font-weight:500;letter-spacing:0.5em;
+  text-transform:uppercase;color:var(--rosegold);
+  opacity:0;animation:fadeUp 1s ease forwards 0.3s;
+}
+.hero-name{
+  font-family:var(--font-display);
+  font-size:clamp(3rem,7vw,6rem);
+  font-weight:300;
+  line-height:1.05;
+  color:var(--text-dark);
+  letter-spacing:0.05em;
+  margin:16px 0;
+  opacity:0;animation:fadeUp 1s ease forwards 0.6s;
+}
+.hero-name em{font-style:italic;color:var(--rose);}
+.hero-subtitle{
+  font-family:var(--font-display);
+  font-size:clamp(1rem,2vw,1.3rem);
+  font-weight:300;
+  color:var(--rosegold);
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  opacity:0;animation:fadeUp 1s ease forwards 0.9s;
+  margin-bottom:24px;
+}
+.hero-text{
+  font-size:0.95rem;
+  font-weight:300;
+  color:var(--text-mid);
+  max-width:480px;
+  line-height:1.8;
+  opacity:0;animation:fadeUp 1s ease forwards 1.1s;
+  margin-bottom:40px;
+}
+.hero-btns{
+  display:flex;gap:16px;flex-wrap:wrap;
+  opacity:0;animation:fadeUp 1s ease forwards 1.3s;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 36px;
+  font-size:0.78rem;font-weight:500;letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--white);
+  background:linear-gradient(135deg,var(--rosegold),var(--brown-soft));
+  border-radius:50px;
+  box-shadow:0 8px 30px rgba(201,149,110,0.4);
+  transition:var(--transition);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 45px rgba(201,149,110,0.5);}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 36px;
+  font-size:0.78rem;font-weight:500;letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--rosegold);
+  border:1px solid var(--rosegold);
+  border-radius:50px;
+  transition:var(--transition);
+  background:rgba(253,248,242,0.7);
+}
+.btn-outline:hover{background:var(--rosegold);color:var(--white);transform:translateY(-3px);}
+.hero-dots{
+  position:absolute;bottom:36px;left:80px;
+  display:flex;gap:10px;z-index:2;
+}
+.hero-dot{
+  width:24px;height:3px;border-radius:2px;
+  background:rgba(201,149,110,0.3);
+  cursor:pointer;transition:var(--transition);
+}
+.hero-dot.active{background:var(--rosegold);width:40px;}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}from{opacity:0;transform:translateY(24px)}}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+#about{
+  background:linear-gradient(160deg,var(--ivory) 0%,#fdf1ea 100%);
+  position:relative;overflow:hidden;
+}
+#about::before{
+  content:'';position:absolute;top:-100px;right:-150px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,196,168,0.25) 0%,transparent 70%);
+  pointer-events:none;
+}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;
+}
+.about-img-wrap{
+  position:relative;
+}
+.about-portrait{
+  width:100%;aspect-ratio:3/4;border-radius:var(--radius);
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light),var(--petal));
+  box-shadow:var(--shadow-deep);
+}
+.about-portrait img{width:100%;height:100%;object-fit:cover;}
+.about-badge{
+  position:absolute;bottom:-20px;right:-20px;
+  width:130px;height:130px;border-radius:50%;
+  background:linear-gradient(135deg,var(--rosegold),var(--brown-soft));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 10px 40px rgba(201,149,110,0.45);
+  text-align:center;
+  border:3px solid rgba(255,255,255,0.5);
+}
+.about-badge-num{
+  font-family:var(--font-display);font-size:1.8rem;font-weight:600;
+  color:var(--white);line-height:1;
+}
+.about-badge-txt{
+  font-size:0.62rem;font-weight:500;letter-spacing:0.08em;
+  text-transform:uppercase;color:rgba(255,255,255,0.9);
+  margin-top:3px;
+}
+.about-gold-line{
+  position:absolute;top:30px;left:-25px;width:2px;height:120px;
+  background:linear-gradient(180deg,transparent,var(--rosegold),transparent);
+}
+.about-text{}
+.about-name{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,3vw,2.8rem);
+  font-weight:400;color:var(--text-dark);
+  line-height:1.1;margin:0 0 6px;
+}
+.about-title{
+  font-size:0.78rem;font-weight:500;letter-spacing:0.35em;
+  text-transform:uppercase;color:var(--rosegold);
+  margin-bottom:28px;
+}
+.about-finalis{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 22px;
+  background:linear-gradient(135deg,rgba(232,196,168,0.35),rgba(212,137,138,0.2));
+  border:1px solid rgba(201,149,110,0.3);
+  border-radius:50px;
+  font-size:0.82rem;
+  font-weight:400;
+  color:var(--text-mid);
+  margin-bottom:28px;
+}
+.about-finalis strong{color:var(--rosegold);font-weight:600;}
+.about-desc{
+  font-size:0.95rem;color:var(--text-mid);line-height:1.9;
+  margin-bottom:32px;
+}
+.about-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  margin-top:36px;
+}
+.about-stat{
+  text-align:center;
+  padding:20px 16px;
+  background:rgba(255,255,255,0.6);
+  border:1px solid rgba(201,149,110,0.18);
+  border-radius:var(--radius-sm);
+  box-shadow:var(--shadow-pink);
+}
+.about-stat-num{
+  font-family:var(--font-display);font-size:2rem;font-weight:500;
+  color:var(--rosegold);line-height:1;
+}
+.about-stat-lbl{font-size:0.7rem;font-weight:400;letter-spacing:0.1em;color:var(--text-soft);margin-top:4px;}
+
+/* ============================================================
+   CREATIONS
+   ============================================================ */
+#creations{background:var(--cream);}
+.creations-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  margin-top:20px;
+}
+.creation-card{
+  position:relative;overflow:hidden;border-radius:var(--radius);
+  cursor:pointer;
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light),var(--petal));
+  box-shadow:var(--shadow-pink);
+  transition:var(--transition);
+  aspect-ratio:4/5;
+}
+.creation-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-deep);}
+.creation-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 0.8s cubic-bezier(0.25,0.8,0.25,1);
+}
+.creation-card:hover img{transform:scale(1.08);}
+.creation-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(44,24,16,0.7) 0%,transparent 60%);
+  transition:var(--transition);
+}
+.creation-card:hover .creation-overlay{
+  background:linear-gradient(0deg,rgba(44,24,16,0.8) 0%,rgba(44,24,16,0.2) 100%);
+}
+.creation-info{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:28px 24px;
+}
+.creation-title{
+  font-family:var(--font-display);
+  font-size:1.4rem;font-weight:400;
+  color:var(--white);
+  letter-spacing:0.05em;
+  margin-bottom:6px;
+}
+.creation-sub{
+  font-size:0.72rem;font-weight:400;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--rosegold-light);
+}
+.creation-card::after{
+  content:'';position:absolute;inset:0;
+  border:1px solid rgba(232,196,168,0.2);
+  border-radius:var(--radius);
+  transition:var(--transition);
+  pointer-events:none;
+}
+.creation-card:hover::after{border-color:rgba(201,149,110,0.5);}
+
+/* ============================================================
+   CATEGORY GALLERIES
+   ============================================================ */
+.gallery-section{
+  padding:80px 0;
+  background:linear-gradient(160deg,var(--ivory) 0%,var(--cream) 100%);
+  border-top:1px solid rgba(201,149,110,0.1);
+}
+.gallery-section:nth-child(even){background:var(--cream);}
+.gallery-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:36px;flex-wrap:wrap;gap:20px;
+}
+.gallery-meta{flex:1;min-width:250px;}
+.gallery-desc{
+  font-size:0.92rem;color:var(--text-soft);
+  max-width:480px;margin-top:10px;
+  font-style:italic;font-family:var(--font-display);font-size:1.05rem;
+}
+.gallery-btns-row{display:flex;gap:12px;flex-wrap:wrap;}
+.gallery-cards{
+  display:flex !important;
+  gap:16px !important;
+  overflow-x:auto !important;
+  scroll-snap-type:x mandatory !important;
+  padding-bottom:18px !important;
+}
+
+.gallery-card{
+  min-width:170px !important;
+  height:170px !important;
+  flex:0 0 auto !important;
+  scroll-snap-align:start !important;
+
+  margin-bottom:32px;
+}
+.gallery-card{
+  aspect-ratio:3/4;
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light));
+  box-shadow:0 6px 24px rgba(255, 153, 154, 0.2);
+  transition:var(--transition);
+  cursor:pointer;
+  position:relative;
+}
+.gallery-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:var(--shadow-gold);}
+.gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease;}
+.gallery-card:hover img{transform:scale(1.08);}
+.gallery-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.2) 0%,transparent 50%);
+  z-index:1;
+}
+.btn-wa{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 28px;
+  font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--white);
+  background:linear-gradient(135deg,#25d366,#128c4e);
+  border-radius:50px;
+  box-shadow:0 6px 22px rgba(37,211,102,0.35);
+  transition:var(--transition);
+}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,0.45);}
+.btn-ig{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 28px;
+  font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--white);
+  background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  border-radius:50px;
+  box-shadow:0 6px 22px rgba(220,39,67,0.3);
+  transition:var(--transition);
+}
+.btn-ig:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(220,39,67,0.4);}
+
+/* ============================================================
+   PATISSERIE
+   ============================================================ */
+#patisserie{
+  background:linear-gradient(160deg,#fdf1ea 0%,var(--cream) 100%);
+  position:relative;overflow:hidden;
+}
+.patisserie-grid{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center;
+  margin-bottom:70px;
+}
+.patisserie-main-img{
+  aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light));
+  box-shadow:var(--shadow-deep);
+  position:relative;
+}
+.patisserie-main-img img{width:100%;height:100%;object-fit:cover;}
+.patisserie-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin:30px 0 36px;
+}
+
+.patisserie-gallery .gallery-card{
+  aspect-ratio:1/1;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.patisserie-gallery .gallery-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.patisserie-video-wrap{
+  margin-bottom:36px;
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light),var(--petal));
+  box-shadow:var(--shadow-deep);
+  aspect-ratio:9/16;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.patisserie-video-wrap video{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);}
+.video-placeholder{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  background:linear-gradient(135deg,rgba(232,196,168,0.6),rgba(212,137,138,0.4));
+}
+.video-play-icon{
+  width:64px;height:64px;border-radius:50%;
+  background:rgba(255,255,255,0.8);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 30px rgba(201,149,110,0.4);
+}
+.map-wrap{
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-pink);
+  margin-top:60px;
+}
+.map-wrap iframe{width:100%;height:380px;border:none;display:block;}
+
+/* ============================================================
+   FORMATIONS
+   ============================================================ */
+#formations{
+  background:linear-gradient(160deg,var(--cream) 0%,var(--ivory) 100%);
+}
+.formations-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px;
+}
+.formation-card{
+  background:rgba(255,255,255,0.7);
+  border:1px solid rgba(201,149,110,0.18);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow-pink);
+  transition:var(--transition);
+}
+.formation-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-deep);}
+.formation-img{
+  aspect-ratio:4/3;overflow:hidden;
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light));
+}
+.formation-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease;}
+.formation-card:hover .formation-img img{transform:scale(1.06);}
+.formation-body{padding:28px 28px 32px;}
+.formation-level{
+  font-size:0.68rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--rosegold);margin-bottom:10px;
+}
+.formation-title{
+  font-family:var(--font-display);font-size:1.5rem;font-weight:400;
+  color:var(--text-dark);margin-bottom:16px;
+}
+.formation-list{
+  list-style:none;display:flex;flex-direction:column;gap:8px;
+  margin-bottom:28px;
+}
+.formation-list li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:0.85rem;color:var(--text-mid);
+}
+.formation-list li::before{
+  content:'◆';color:var(--rosegold);font-size:0.5rem;margin-top:6px;flex-shrink:0;
+}
+.formation-btns{display:flex;flex-direction:column;gap:10px;}
+
+/* ============================================================
+   ORDER FORM
+   ============================================================ */
+#order{
+  background:linear-gradient(160deg,#fdf1ea 0%,var(--cream) 100%);
+  position:relative;overflow:hidden;
+}
+#order::before{
+  content:'';position:absolute;bottom:-200px;left:-200px;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,196,168,0.2) 0%,transparent 70%);
+  pointer-events:none;
+}
+.order-wrap{
+  max-width:700px;margin:0 auto;
+  background:rgba(255,255,255,0.65);
+  border:1px solid rgba(201,149,110,0.2);
+  border-radius:24px;
+  padding:56px 56px;
+  box-shadow:var(--shadow-deep);
+  backdrop-filter:blur(10px);
+  position:relative;
+}
+.order-wrap::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--rosegold),var(--petal),var(--rosegold));
+  border-radius:24px 24px 0 0;
+}
+.order-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;
+}
+.field-group{display:flex;flex-direction:column;gap:8px;}
+.field-group.full{grid-column:1/-1;}
+.field-label{
+  font-size:0.72rem;font-weight:500;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--text-soft);
+}
+.field-input{
+  padding:14px 18px;
+  font-family:inherit;font-size:0.92rem;
+  background:rgba(255,255,255,0.8);
+  border:1px solid rgba(201,149,110,0.25);
+  border-radius:var(--radius-sm);
+  color:var(--text-dark);
+  transition:var(--transition);
+  outline:none;
+  width:100%;
+}
+.field-input:focus{border-color:var(--rosegold);box-shadow:0 0 0 3px rgba(201,149,110,0.12);}
+.field-input::placeholder{color:var(--text-soft);opacity:0.6;}
+textarea.field-input{resize:vertical;min-height:120px;}
+.btn-submit{
+  width:100%;padding:18px;
+  font-size:0.82rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--white);
+  background:linear-gradient(135deg,var(--rosegold),var(--brown-soft));
+  border-radius:50px;
+  box-shadow:0 8px 30px rgba(201,149,110,0.4);
+  transition:var(--transition);
+  margin-top:10px;
+  font-family:inherit;
+}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(201,149,110,0.5);}
+
+/* ============================================================
+   PORTFOLIO
+   ============================================================ */
+#portfolio{background:var(--ivory);}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-bottom:40px;
+}
+.portfolio-item{
+  border-radius:var(--radius-sm);overflow:hidden;
+  background:linear-gradient(135deg,var(--blush),var(--rosegold-light));
+  box-shadow:var(--shadow-pink);
+  transition:var(--transition);
+  cursor:pointer;
+  aspect-ratio:1/1;
+  position:relative;
+}
+.portfolio-item:nth-child(1){aspect-ratio:1/1.3;}
+.portfolio-item:nth-child(4){aspect-ratio:1/1.3;}
+.portfolio-item:hover{transform:scale(1.03);box-shadow:var(--shadow-gold);z-index:2;}
+.portfolio-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease;}
+.portfolio-item:hover img{transform:scale(1.08);}
+.portfolio-item::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.15) 0%,transparent 50%);
+  pointer-events:none;
+}
+.portfolio-cta{text-align:center;}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+#testimonials{
+  background:linear-gradient(160deg,#fdf1ea 0%,var(--cream) 100%);
+}
+.testimonials-slider{position:relative;overflow:hidden;}
+.testimonials-track{
+  display:flex;transition:transform 0.7s cubic-bezier(0.25,0.8,0.25,1);
+}
+.testimonial-slide{
+  min-width:100%;padding:0 40px;
+  display:flex;gap:32px;flex-wrap:wrap;justify-content:center;
+}
+.testimonial-card{
+  flex:1;min-width:280px;max-width:420px;
+  background:rgba(255,255,255,0.65);
+  border:1px solid rgba(201,149,110,0.18);
+  border-radius:var(--radius);
+  padding:36px 32px;
+  box-shadow:var(--shadow-pink);
+  backdrop-filter:blur(10px);
+  position:relative;
+}
+.testimonial-card::before{
+  content:'"';
+  font-family:var(--font-display);font-size:5rem;font-weight:300;
+  color:var(--rosegold-light);line-height:1;
+  position:absolute;top:16px;left:24px;opacity:0.5;
+}
+.test-stars{
+  display:flex;gap:4px;margin-bottom:16px;
+}
+.test-star{
+  width:16px;height:16px;
+}
+.test-text{
+  font-family:var(--font-display);font-style:italic;
+  font-size:1.05rem;color:var(--text-mid);line-height:1.8;
+  margin-bottom:20px;
+  position:relative;z-index:1;
+}
+.test-name{
+  font-size:0.78rem;font-weight:500;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--rosegold);
+}
+.test-role{font-size:0.75rem;color:var(--text-soft);margin-top:3px;}
+.slider-nav{
+  display:flex;gap:12px;justify-content:center;margin-top:36px;
+}
+.slider-dot{
+  width:32px;height:3px;border-radius:2px;
+  background:rgba(201,149,110,0.3);cursor:pointer;
+  transition:var(--transition);border:none;
+}
+.slider-dot.active{background:var(--rosegold);width:48px;}
+
+/* ============================================================
+   CONTACT / SOCIAL
+   ============================================================ */
+#contact{background:var(--ivory);}
+.contact-center{text-align:center;margin-bottom:60px;}
+.contact-brand{
+  font-family:var(--font-display);font-size:2.5rem;font-weight:400;
+  color:var(--text-dark);margin-bottom:8px;
+}
+.contact-phone{
+  font-size:1.2rem;font-weight:300;color:var(--rosegold);
+  letter-spacing:0.15em;margin-bottom:6px;
+}
+.contact-ig{font-size:0.85rem;color:var(--text-soft);}
+.social-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  margin-bottom:48px;
+}
+.social-card{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  padding:32px 20px;
+  background:rgba(255,255,255,0.65);
+  border:1px solid rgba(201,149,110,0.2);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-pink);
+  cursor:pointer;
+  transition:var(--transition);
+  text-align:center;
+}
+.social-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-gold);
+  border-color:var(--rosegold);
+  background:rgba(255,255,255,0.9);
+}
+.social-icon{
+  width:52px;height:52px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--rosegold-light),var(--blush));
+  box-shadow:0 4px 18px rgba(201,149,110,0.25);
+  transition:var(--transition);
+}
+.social-card:hover .social-icon{
+  background:linear-gradient(135deg,var(--rosegold),var(--brown-soft));
+  box-shadow:0 8px 28px rgba(201,149,110,0.45);
+}
+.social-icon svg{width:24px;height:24px;}
+.social-name{
+  font-size:0.72rem;font-weight:600;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--text-mid);
+}
+.social-handle{font-size:0.8rem;color:var(--rosegold);}
+.contact-wa-cta{text-align:center;}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+#footer{
+  background:linear-gradient(160deg,var(--text-dark) 0%,#3d2318 100%);
+  color:rgba(255,255,255,0.7);
+  padding:70px 0 40px;
+}
+.footer-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;
+  padding-bottom:50px;
+  border-bottom:1px solid rgba(201,149,110,0.2);
+  margin-bottom:36px;
+}
+.footer-brand{
+  font-family:var(--font-display);font-size:1.8rem;font-weight:400;
+  color:var(--white);letter-spacing:0.1em;margin-bottom:8px;
+}
+.footer-tagline{
+  font-size:0.75rem;font-weight:400;letter-spacing:0.3em;
+  text-transform:uppercase;color:var(--rosegold-light);margin-bottom:16px;
+}
+.footer-desc{font-size:0.85rem;line-height:1.8;color:rgba(255,255,255,0.5);}
+.footer-col-title{
+  font-size:0.72rem;font-weight:600;letter-spacing:0.3em;
+  text-transform:uppercase;color:var(--rosegold-light);
+  margin-bottom:20px;
+}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{
+  font-size:0.85rem;color:rgba(255,255,255,0.5);
+  transition:color 0.3s;
+}
+.footer-links a:hover{color:var(--rosegold-light);}
+.footer-social{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
+.footer-social-btn{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(201,149,110,0.15);
+  border:1px solid rgba(201,149,110,0.25);
+  transition:var(--transition);
+}
+.footer-social-btn:hover{background:var(--rosegold);border-color:var(--rosegold);transform:translateY(-2px);}
+.footer-social-btn svg{width:16px;height:16px;fill:rgba(255,255,255,0.7);}
+.footer-social-btn:hover svg{fill:var(--white);}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:0.75rem;color:rgba(255,255,255,0.3);flex-wrap:wrap;gap:10px;
+}
+.footer-line{
+  width:80px;height:1px;
+  background:linear-gradient(90deg,var(--rosegold),transparent);
+  margin:12px 0 6px;
+}
+
+/* ============================================================
+   ARABIC RTL
+   ============================================================ */
+html[dir="rtl"] .header-nav{direction:rtl;}
+html[dir="rtl"] .hero-content{padding:140px 80px 100px 40px;}
+html[dir="rtl"] .hero-dots{left:auto;right:80px;}
+html[dir="rtl"] .about-grid{direction:rtl;}
+html[dir="rtl"] .about-gold-line{left:auto;right:-25px;}
+html[dir="rtl"] .section-line:not(.center){margin-left:0;margin-right:0;}
+html[dir="rtl"] .footer-line{background:linear-gradient(270deg,var(--rosegold),transparent);}
+html[dir="rtl"] .formation-list li::before{margin-right:0;margin-left:10px;}
+
+/* ============================================================
+   SCROLL ANIMATIONS
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:1100px){
+  .about-grid{grid-template-columns:1fr 1.3fr;gap:50px;}
+  .creations-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-cards{grid-template-columns:repeat(5,1fr);}
+  .formations-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-top{grid-template-columns:1fr 1fr;gap:40px;}
+}
+@media(max-width:900px){
+  .header-nav{display:none;}
+  .btn-cmd{display:none;}
+  .hamburger{display:flex;}
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .patisserie-grid{grid-template-columns:1fr;}
+  .social-grid{grid-template-columns:repeat(2,1fr);}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+  .portfolio-item:nth-child(1),.portfolio-item:nth-child(4){aspect-ratio:1/1;}
+  .footer-top{grid-template-columns:1fr;}
+  .container{padding:0 24px;}
+  section{padding:70px 0;}
+}
+@media(max-width:680px){
+  .creations-grid{grid-template-columns:1fr 1fr;}
+  .gallery-cards{grid-template-columns:repeat(3,1fr);}
+  .gallery-cards .gallery-card:nth-child(4),.gallery-cards .gallery-card:nth-child(5){display:none;}
+  .formations-grid{grid-template-columns:1fr;}
+  .order-grid{grid-template-columns:1fr;}
+  .order-wrap{padding:36px 24px;}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+  .social-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-content{padding:120px 24px 80px;}
+  .hero-dots{left:24px;}
+  html[dir="rtl"] .hero-content{padding:120px 24px 80px;}
+  html[dir="rtl"] .hero-dots{right:24px;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .about-stats{grid-template-columns:repeat(3,1fr);}
+  .testimonial-slide{padding:0 16px;}
+  .gallery-header{flex-direction:column;align-items:flex-start;}
+  #header{padding:0 20px;}
+}
+@media(max-width:420px){
+  .creations-grid{grid-template-columns:1fr;}
+  .gallery-cards{grid-template-columns:repeat(2,1fr);}
+  .gallery-cards .gallery-card:nth-child(3),.gallery-cards .gallery-card:nth-child(4),.gallery-cards .gallery-card:nth-child(5){display:none;}
+  .social-grid{grid-template-columns:1fr 1fr;}
+  .about-stats{grid-template-columns:1fr 1fr;}
+}
+.header-logo{
+  font-size:1.15rem!important;
+  letter-spacing:.20em!important;
+  font-weight:800!important;
+  color:#1d0b10!important;
+}
+.header-logo span{
+  color:#e91e63!important;
+  text-shadow:0 0 16px rgba(233,30,99,.55)!important;
+}
+
+.hero-content{
+  background:rgba(255,255,255,.38)!important;
+  backdrop-filter:blur(2px)!important;
+  border:none!important;
+  box-shadow:none!important;
+  text-align:center!important;
+}
+
+.hero-kicker{
+  color:#1d0b10!important;
+  font-size:.95rem!important;
+  letter-spacing:.28em!important;
+  font-weight:800!important;
+}
+
+.hero-title,
+.hero-name{
+  font-size:clamp(3.2rem,11vw,5.5rem)!important;
+  color:#1d0b10!important;
+  font-weight:800!important;
+  line-height:1!important;
+}
+.hero-title em,
+.hero-name em{
+  color:#e91e63!important;
+  text-shadow:0 0 18px rgba(233,30,99,.45)!important;
+}
+
+.hero-subtitle{
+  color:#e91e63!important;
+  font-size:1.1rem!important;
+  font-weight:800!important;
+  letter-spacing:.22em!important;
+}
+
+.hero-desc,
+.hero-content p{
+  color:#1d0b10!important;
+  font-size:1.05rem!important;
+  font-weight:700!important;
+}
+
+.btn-primary,
+.btn-cmd{
+  background:linear-gradient(135deg,#e91e63,#d4af37)!important;
+  color:rgb(236, 154, 202)!important;
+  border-radius:50px!important;
+  box-shadow:0 16px 45px rgba(233,30,99,.35)!important;
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.88)!important;
+  color:#e91e63!important;
+  border:1px solid #d4af37!important;
+  border-radius:50px!important;
+}
+.hero-content{
+  background:transparent !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+.hero::before,
+.hero::after,
+.hero-overlay{
+  background:transparent !important;
+  opacity:0 !important;
+  display:none !important;
+}
+
+.hero-title,
+.hero-name,
+.hero-kicker,
+.hero-subtitle,
+.hero-desc,
+.hero-content p{
+  text-shadow:
+    0 2px 8px rgba(255,255,255,.95),
+    0 0 18px rgba(255,255,255,.75) !important;
+}
+.hero-kicker,
+.hero-subtitle{
+  color:#fff7f9 !important;
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.65),
+    0 0 25px rgba(255,255,255,.35) !important;
+}
+
+.hero-title{
+  color:#ffffff !important;
+  text-shadow:
+    0 4px 18px rgba(0,0,0,.45) !important;
+}
+
+.hero-title em,
+.hero-name em{
+  color:#ff3f8e !important;
+  text-shadow:
+    0 0 12px rgba(255,64,140,.75),
+    0 0 35px rgba(255,64,140,.45),
+    0 2px 10px rgba(0,0,0,.35) !important;
+}
+
+.hero-desc,
+.hero-content p{
+  color:#ffffff !important;
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.7) !important;
+}
+
+.btn-primary,
+.btn-cmd{
+  background:linear-gradient(135deg,#ff2f86,#f2b544) !important;
+  box-shadow:
+    0 12px 35px rgba(255,47,134,.45),
+    0 0 22px rgba(255,47,134,.25) !important;
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.18) !important;
+  border:1px solid rgba(255,255,255,.55) !important;
+  color:#ffffff !important;
+  backdrop-filter:blur(8px) !important;
+}
+.gallery-cards::-webkit-scrollbar{
+  height:6px !important;
+}
+
+.gallery-cards::-webkit-scrollbar-track{
+  background:#ffe1ec !important;
+  border-radius:30px !important;
+}
+
+.gallery-cards::-webkit-scrollbar-thumb{
+  background:#ff2f86 !important;
+  border-radius:30px !important;
+}
+.order-form button,
+.order-form .btn-primary,
+form button[type="submit"]{
+  background:linear-gradient(135deg,#ff2f86,#d58a6b) !important;
+  color:#ffffff !important;
+  opacity:1 !important;
+  box-shadow:0 14px 35px rgba(255,47,134,.35) !important;
+}
+
+.order-form button span,
+form button[type="submit"] span{
+  color:#ffffff !important;
+}
+.order-form button,
+form button[type="submit"],
+.form-submit{
+  opacity:1 !important;
+  background:linear-gradient(135deg,#ff2f86,#d58a6b) !important;
+  color:#fff !important;
+}
+/* ===== FINAL CLEAN FIXES ONLY ===== */
+/* ===== FINAL CLEAN FIXES ONLY ===== */
+
+form button,
+form button[type="submit"],
+.form-submit,
+.order-form button{
+  opacity:1 !important;
+  background:linear-gradient(135deg,#ff2f86,#d58a6b) !important;
+  color:#fff !important;
+  box-shadow:0 14px 35px rgba(255,47,134,.35) !important;
+}
+#intro .intro-content{
+  position:absolute !important;
+  top:50% !important;
+  left:50% !important;
+  transform:translate(-50%,-50%) !important;
+  width:100% !important;
+  text-align:center !important;
+}
+
+#intro .intro-logo{
+  display:block !important;
+  width:100% !important;
+  text-align:center !important;
+  font-size:clamp(2rem,8vw,4rem) !important;
+  letter-spacing:.14em !important;
+}
+
+#intro .intro-sub{
+  width:100% !important;
+  text-align:center !important;
+}
+#intro .intro-logo,
+#intro .intro-logo span{
+  color:#ffffff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  text-shadow:
+    0 0 15px rgba(255,255,255,.45),
+    0 0 35px rgba(255,47,134,.55) !important;
+}
+
+#intro .intro-logo span{
+  color:#ff2f86 !important;
+}
+
+
+/* ============================================================
+   FIX INTRO GHIZLANE PRESTIGE - FINAL
+   ============================================================ */
+#intro{
+  isolation:isolate !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:99999 !important;
+  background:
+    radial-gradient(circle at center, rgba(181,22,85,.34), transparent 38%),
+    linear-gradient(135deg,#050204,#13070c,#000) !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+}
+
+#introCanvas{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  z-index:1 !important;
+}
+
+#intro .intro-content{
+  position:relative !important;
+  z-index:10 !important;
+  width:100% !important;
+  padding:0 22px !important;
+  text-align:center !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+#intro .intro-brand,
+#introBrand{
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  color:#ffffff !important;
+  font-family:var(--font-display) !important;
+  font-size:clamp(2.4rem,9vw,5.2rem) !important;
+  font-weight:600 !important;
+  line-height:1.1 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  text-align:center !important;
+  text-shadow:
+    0 0 16px rgba(255,255,255,.65),
+    0 0 42px rgba(255,47,134,.85),
+    0 4px 22px rgba(0,0,0,.9) !important;
+}
+
+#intro .intro-line{
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  width:190px !important;
+  height:1px !important;
+  margin:28px auto 22px !important;
+  background:linear-gradient(to right,transparent,#ff2f86,#d4af37,transparent) !important;
+  box-shadow:0 0 18px rgba(255,47,134,.8) !important;
+}
+
+#intro .intro-sub,
+#introSub{
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  color:#ffffff !important;
+  font-size:18px !important;
+  font-weight:400 !important;
+  letter-spacing:.48em !important;
+  text-transform:uppercase !important;
+  text-align:center !important;
+  text-shadow:
+    0 0 12px rgba(255,255,255,.55),
+    0 0 30px rgba(255,47,134,.65) !important;
+}
+
+@media(max-width:520px){
+  #intro .intro-brand,
+  #introBrand{
+    font-size:34px !important;
+    letter-spacing:.12em !important;
+  }
+  #intro .intro-sub,
+  #introSub{
+    font-size:14px !important;
+    letter-spacing:.32em !important;
+  }
+}
+#intro .intro-content{
+  position:fixed !important;
+  top:50vh !important;
+  left:50vw !important;
+  transform:translate(-50%, -50%) !important;
+  width:100% !important;
+  text-align:center !important;
+}
+
+#intro .intro-brand{
+  text-align:center !important;
+  margin:0 auto !important;
+}
+.hero-overlay{
+  display:block !important;
+  opacity:1 !important;
+  background:linear-gradient(
+    180deg,
+    rgba(20,8,12,.25) 0%,
+    rgba(20,8,12,.35) 45%,
+    rgba(20,8,12,.55) 100%
+  ) !important;
+}
+
+.hero-content{
+  text-align:center !important;
+  padding-top:140px !important;
+}
+
+.hero-label{
+  font-size:.72rem !important;
+  letter-spacing:.45em !important;
+  color:#fff !important;
+}
+
+.hero-name{
+  font-size:3.4rem !important;
+  color:#fff !important;
+  text-shadow:0 8px 25px rgba(0,0,0,.45) !important;
+}
+
+.hero-name em{
+  color:#f28aa8 !important;
+}
+
+.hero-subtitle{
+  color:#fff !important;
+  font-size:.85rem !important;
+  letter-spacing:.25em !important;
+}
+
+.hero-text{
+  display:none !important;
+}
+.btn-submit,
+form button[type="submit"]{
+  background:linear-gradient(135deg,#d08a6b,#9b5f4d) !important;
+  color:#ffffff !important;
+  opacity:1 !important;
+  font-weight:800 !important;
+  letter-spacing:.16em !important;
+  text-shadow:0 2px 8px rgba(0,0,0,.25) !important;
+  box-shadow:0 14px 35px rgba(155,95,77,.35) !important;
+}
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:all .9s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+#intro .intro-content{
+  position:fixed !important;
+  top:50% !important;
+  left:50% !important;
+  width:100% !important;
+  text-align:center !important;
+  transform:translate(-50%,-50%) !important;
+}
+
+#intro .intro-brand{
+  animation:brandLuxury 2.4s ease forwards !important;
+  transform-origin:center !important;
+}
+
+@keyframes brandLuxury{
+  0%{
+    opacity:0;
+    letter-spacing:.45em;
+    filter:blur(12px);
+  }
+  100%{
+    opacity:1;
+    letter-spacing:.16em;
+    filter:blur(0);
+  }
+}
+@media(max-width:680px){
+  section{
+    padding:55px 0 !important;
+  }
+
+  #patisserie{
+    padding-bottom:35px !important;
+  }
+
+  #formations{
+    padding-top:45px !important;
+  }
+
+  .patisserie-gallery{
+    margin-bottom:20px !important;
+  }
+
+  .patisserie-video-wrap{
+    display:none !important;
+    margin:0 !important;
+  }
+}
+#about{
+  background:#fff4ee !important;
+}
+
+#creations,
+#formations,
+#contact{
+  background:#fffdf9 !important;
+}
+
+#patisserie,
+#portfolio,
+#testimonials{
+  background:#fdf1ea !important;
+}
+
+#order{
+  background:#fff0f5 !important;
+}
+
+.gallery-section:nth-of-type(odd){
+  background:#fff6f0 !important;
+}
+
+.gallery-section:nth-of-type(even){
+  background:#fffaf7 !important;
+}
+
+section{
+  border-top:1px solid rgba(214,156,126,.18) !important;
+}
+
+</style>
+</head>
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{threshold:0.15});
+
+reveals.forEach(el=>observer.observe(el));
+</script>
+<body>
+
+<!-- ============================================================
+     CINEMATIC INTRO
+     ============================================================ -->
+<div id="intro">
+  <canvas id="introCanvas"></canvas>
+  <div class="intro-content">
+    <div class="intro-brand" id="introBrand">GHIZLANE PRESTIGE</div>
+    <div class="intro-line" id="introLine"></div>
+    <div class="intro-sub" id="introSub">Cake Design</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header id="header">
+  <a href="#hero" class="header-logo">Ghizlane <span>Prestige</span></a>
+  <ul class="header-nav">
+    <li><a href="#hero" data-fr="Accueil" data-ar="الرئيسية">Accueil</a></li>
+    <li><a href="#creations" data-fr="Créations" data-ar="الإبداعات">Créations</a></li>
+    <li><a href="#patisserie" data-fr="Pâtisserie" data-ar="المعجنات">Pâtisserie</a></li>
+    <li><a href="#formations" data-fr="Formations" data-ar="التكوينات">Formations</a></li>
+    <li><a href="#about" data-fr="À propos" data-ar="عني">À propos</a></li>
+    <li><a href="#portfolio" data-fr="Portfolio" data-ar="الأعمال">Portfolio</a></li>
+    <li><a href="#contact" data-fr="Contact" data-ar="تواصل">Contact</a></li>
+  </ul>
+  <div class="header-right">
+    <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20passer%20une%20commande." target="_blank" class="btn-cmd" data-fr="Commander" data-ar="اطلب الآن">Commander</a>
+    <div class="lang-btns">
+      <button class="lang-btn active" id="btnFr" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" id="btnAr" onclick="setLang('ar')">العربية</button>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#hero" onclick="closeMenu()" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+  <a href="#creations" onclick="closeMenu()" data-fr="Créations" data-ar="الإبداعات">Créations</a>
+  <a href="#patisserie" onclick="closeMenu()" data-fr="Pâtisserie" data-ar="المعجنات">Pâtisserie</a>
+  <a href="#formations" onclick="closeMenu()" data-fr="Formations" data-ar="التكوينات">Formations</a>
+  <a href="#about" onclick="closeMenu()" data-fr="À propos" data-ar="عني">À propos</a>
+  <a href="#portfolio" onclick="closeMenu()" data-fr="Portfolio" data-ar="الأعمال">Portfolio</a>
+  <a href="#contact" onclick="closeMenu()" data-fr="Contact" data-ar="تواصل">Contact</a>
+  <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige" target="_blank" style="color:var(--rosegold);" data-fr="Commander sur WhatsApp" data-ar="اطلب عبر واتساب">Commander sur WhatsApp</a>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-slider" id="heroSlider">
+    <div class="hero-slide active"><img src="public/images/ghizlane/hero-wedding-floral-big.jpg" alt=""></div>
+    <div class="hero-slide"><img src="public/images/ghizlane/hero-white-luxury-lights.jpg" alt=""></div>
+    <div class="hero-slide"><img src="public/images/ghizlane/hero-chef-wedding-cake.jpg" alt=""></div>
+    <div class="hero-slide"><img src="public/images/ghizlane/hero-glowing-tier-cake.jpg" alt=""></div>
+    <div class="hero-slide"><img src="public/images/ghizlane/hero-birthday-raspberry-cake.jpg" alt=""></div>
+    <div class="hero-slide"><img src="public/images/ghizlane/hero-baby-custom-cake.jpg" alt=""></div>
+    <div class="hero-slide"><img src="public/images/ghizlane/hero-eid-custom-cake.jpg" alt=""></div>
+    <div class="hero-slide"><img src="public/images/ghizlane/hero-wedding-floral-small.jpg" alt=""></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-label" data-fr="Cake Artiste · Instructrice Cake Design" data-ar="فنانة الكيك · مدربة تصميم الكيك">Cake Artiste · Instructrice Cake Design</p>
+    <h1 class="hero-name">Ghizlane <em>Prestige</em></h1>
+    <p class="hero-subtitle" data-fr="Wedding Cakes · Cake Design · Formations" data-ar="كيك الأعراس · تصميم الكيك · التكوينات">Wedding Cakes · Cake Design · Formations</p>
+    <p class="hero-text" data-fr="Créations personnalisées, pâtisserie raffinée et formations professionnelles dans un univers élégant et haut de gamme." data-ar="إبداعات مخصصة، حلويات راقية وتكوينات احترافية في عالم أنيق وفاخر.">Créations personnalisées, pâtisserie raffinée et formations professionnelles dans un univers élégant et haut de gamme.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20commander%20un%20gâteau%20personnalisé." target="_blank" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-fr="Commander sur WhatsApp" data-ar="اطلب عبر واتساب">Commander sur WhatsApp</span>
+      </a>
+      <a href="#formations" class="btn-outline">
+        <span data-fr="Découvrir les formations" data-ar="اكتشف التكوينات">Découvrir les formations</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-gold-line"></div>
+        <div class="about-portrait lux-img">
+          <img src="public/images/ghizlane/about-chef.jpg" alt="Ghizlane Lachheb">
+          <div class="shimmer"></div>
+        </div>
+        <div class="about-badge">
+          <span class="about-badge-num">+100K</span>
+          <span class="about-badge-txt" data-fr="Communauté" data-ar="مجتمع">Communauté</span>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <span class="section-label" data-fr="À propos" data-ar="عني">À propos</span>
+        <h2 class="about-name">Ghizlane <em style="font-style:italic;color:var(--rose);">Lachheb</em></h2>
+        <p class="about-title" data-fr="Cake Artiste · Instructrice Cake Design · Créatrice de douceurs" data-ar="فنانة الكيك · مدربة تصميم الكيك · صانعة الحلويات">Cake Artiste · Instructrice Cake Design · Créatrice de douceurs</p>
+        <div class="about-finalis">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span data-fr="Finaliste" data-ar="المتأهلة للنهائي"><strong data-fr="Finaliste" data-ar="المتأهلة للنهائي">Finaliste</strong></span>
+          <span data-fr="@rdvgourmands — Expérience en pâtisserie haut de gamme et compétitions internationales." data-ar="@rdvgourmands — خبرة في الحلويات الراقية والمسابقات الدولية.">@rdvgourmands — Expérience en pâtisserie haut de gamme et compétitions internationales.</span>
+        </div>
+        <p class="about-desc" data-fr="Passionnée par l'art du Cake Design depuis des années, Ghizlane Lachheb a développé un univers unique alliant élégance, précision artistique et créativité. Elle accompagne ses clients dans la création de pièces uniques pour leurs événements les plus précieux, tout en transmettant son savoir-faire à travers ses formations professionnelles." data-ar="شغوفة بفن تصميم الكيك منذ سنوات، طوّرت غزلان لشهب عالمًا فريدًا يجمع بين الأناقة والدقة الفنية والإبداع. ترافق عملاءها في إنشاء قطع فريدة لأجمل مناسباتهم، مع نقل خبرتها عبر تكويناتها الاحترافية.">Passionnée par l'art du Cake Design depuis des années, Ghizlane Lachheb a développé un univers unique alliant élégance, précision artistique et créativité.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="about-stat-num">500+</div>
+            <div class="about-stat-lbl" data-fr="Créations" data-ar="إبداعات">Créations</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">300+</div>
+            <div class="about-stat-lbl" data-fr="Formations" data-ar="تكوينات">Formations</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">5⭐</div>
+            <div class="about-stat-lbl" data-fr="Satisfaction" data-ar="رضا العملاء">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CATEGORY GALLERIES
+     ============================================================ -->
+<!-- WEDDING -->
+<div class="gallery-section" id="gallery-wedding">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="gallery-meta">
+        <span class="section-label" data-fr="Collection" data-ar="مجموعة">Collection</span>
+        <h3 class="section-title" data-fr="Wedding <em>Cakes</em>" data-ar="كيك <em>الأعراس</em>">Wedding <em>Cakes</em></h3>
+        <p class="gallery-desc" data-fr="Pièces montées raffinées pour votre plus beau jour." data-ar="قطع راقية لأجمل أيامكم.">Pièces montées raffinées pour votre plus beau jour.</p>
+      </div>
+      <div class="gallery-btns-row">
+        <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20commander%20un%20Wedding%20Cake." target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-fr="Commander" data-ar="اطلب الآن">Commander</span>
+        </a>
+        <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="btn-ig">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span data-fr="Instagram" data-ar="إنستغرام">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="gallery-cards reveal">
+      <div class="gallery-card"><img src="public/images/ghizlane/wedding-01.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/wedding-02.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/wedding-03.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/wedding-04.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/wedding-05.jpg" alt=""><div class="shimmer"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ANNIVERSAIRES -->
+<div class="gallery-section" id="gallery-anniversaires">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="gallery-meta">
+        <span class="section-label" data-fr="Collection" data-ar="مجموعة">Collection</span>
+        <h3 class="section-title" data-fr="<em>Anniversaires</em>" data-ar="<em>أعياد الميلاد</em>"><em>Anniversaires</em></h3>
+        <p class="gallery-desc" data-fr="Des gâteaux personnalisés pour célébrer chaque moment." data-ar="كيك مخصص لكل مناسبة خاصة.">Des gâteaux personnalisés pour célébrer chaque moment.</p>
+      </div>
+      <div class="gallery-btns-row">
+        <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20commander%20un%20gâteau%20d'anniversaire." target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-fr="Commander" data-ar="اطلب الآن">Commander</span>
+        </a>
+        <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="btn-ig">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span data-fr="Instagram" data-ar="إنستغرام">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="gallery-cards reveal">
+      <div class="gallery-card"><img src="public/images/ghizlane/anniversaire-01.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/anniversaire-02.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/anniversaire-03.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/anniversaire-04.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/anniversaire-05.jpg" alt=""><div class="shimmer"></div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- EID -->
+<div class="gallery-section" id="gallery-eid">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="gallery-meta">
+        <span class="section-label" data-fr="Collection" data-ar="مجموعة">Collection</span>
+        <h3 class="section-title" data-fr="Eid & <em>Célébrations</em>" data-ar="العيد <em>والمناسبات</em>">Eid & <em>Célébrations</em></h3>
+        <p class="gallery-desc" data-fr="Tradition et raffinement pour vos fêtes les plus precieuses." data-ar="تقليد وأناقة لأعز مناسباتكم.">Tradition et raffinement pour vos fêtes les plus precieuses.</p>
+      </div>
+      <div class="gallery-btns-row">
+        <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20commander%20pour%20l'Eid." target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-fr="Commander" data-ar="اطلب الآن">Commander</span>
+        </a>
+        <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="btn-ig">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span data-fr="Instagram" data-ar="إنستغرام">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="gallery-cards reveal">
+      <div class="gallery-card"><img src="public/images/ghizlane/eid-01.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/eid-02.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/eid-03.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/eid-04.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/eid-05.jpg" alt=""><div class="shimmer"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIES -->
+<div class="gallery-section" id="gallery-cookies">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="gallery-meta">
+        <span class="section-label" data-fr="Collection" data-ar="مجموعة">Collection</span>
+        <h3 class="section-title" data-fr="Cookies & <em>Douceurs</em>" data-ar="كوكيز <em>وحلويات</em>">Cookies & <em>Douceurs</em></h3>
+        <p class="gallery-desc" data-fr="Gourmandises signatures, artisanales et irrésistibles." data-ar="حلويات مميزة يدوية الصنع لا تقاوم.">Gourmandises signatures, artisanales et irrésistibles.</p>
+      </div>
+      <div class="gallery-btns-row">
+        <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20commander%20des%20cookies%20et%20douceurs." target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-fr="Commander" data-ar="اطلب الآن">Commander</span>
+        </a>
+        <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="btn-ig">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span data-fr="Instagram" data-ar="إنستغرام">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="gallery-cards reveal">
+      <div class="gallery-card"><img src="public/images/ghizlane/cookies-01.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cookies-02.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cookies-03.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cookies-04.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cookies-05.jpg" alt=""><div class="shimmer"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CAKE DESIGN -->
+<div class="gallery-section" id="gallery-design">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="gallery-meta">
+        <span class="section-label" data-fr="Collection" data-ar="مجموعة">Collection</span>
+        <h3 class="section-title" data-fr="Cake <em>Design</em>" data-ar="تصميم <em>الكيك</em>">Cake <em>Design</em></h3>
+        <p class="gallery-desc" data-fr="L'art du cake design à son plus haut niveau d'expression." data-ar="فن تصميم الكيك في أعلى مستوياته.">L'art du cake design à son plus haut niveau d'expression.</p>
+      </div>
+      <div class="gallery-btns-row">
+        <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20un%20gâteau%20Cake%20Design%20sur%20mesure." target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-fr="Commander" data-ar="اطلب الآن">Commander</span>
+        </a>
+        <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="btn-ig">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span data-fr="Instagram" data-ar="إنستغرام">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="gallery-cards reveal">
+      <div class="gallery-card"><img src="public/images/ghizlane/cake-design-01.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cake-design-02.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cake-design-03.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cake-design-04.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/cake-design-05.jpg" alt=""><div class="shimmer"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PATISSERIE
+     ============================================================ -->
+<section id="patisserie">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:60px;">
+      <span class="section-label" data-fr="Pâtisserie" data-ar="المعجنات">Pâtisserie</span>
+      <h2 class="section-title" data-fr="Pâtisserie raffinée & <em>douceurs signatures</em>" data-ar="معجنات راقية <em>وحلويات مميزة</em>">Pâtisserie raffinée & <em>douceurs signatures</em></h2>
+      <div class="section-line center"></div>
+    </div>
+    <div class="patisserie-grid reveal">
+      <div class="patisserie-main-img lux-img">
+        <img src="public/images/ghizlane/patisserie-main.jpg" alt="">
+        <div class="shimmer"></div>
+      </div>
+      <div>
+        <p style="font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--text-mid);line-height:1.9;margin-bottom:32px;" data-fr="Un voyage sensoriel au cœur de la pâtisserie marocaine revisitée. Chaque pièce est une signature, un équilibre parfait entre tradition et modernité, entre saveur et esthétisme." data-ar="رحلة حسية في قلب المعجنات المغربية المعاصرة. كل قطعة بصمة، توازن مثالي بين التقليد والحداثة، بين النكهة والجمال.">Un voyage sensoriel au cœur de la pâtisserie marocaine revisitée.</p>
+        <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20commander%20des%20douceurs." target="_blank" class="btn-primary" style="display:inline-flex;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-fr="Commander des douceurs" data-ar="اطلب الحلويات">Commander des douceurs</span>
+        </a>
+      </div>
+    </div>
+    <div class="patisserie-gallery reveal">
+      <div class="gallery-card"><img src="public/images/ghizlane/patisserie-01.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/patisserie-02.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/patisserie-03.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/patisserie-04.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="gallery-card"><img src="public/images/ghizlane/patisserie-05.jpg" alt=""><div class="shimmer"></div></div>
+    </div>
+    
+</section>
+
+<!-- ============================================================
+     FORMATIONS
+     ============================================================ -->
+<section id="formations">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:60px;">
+      <span class="section-label" data-fr="Formations professionnelles" data-ar="تكوينات احترافية">Formations professionnelles</span>
+      <h2 class="section-title" data-fr="Formations <em>Cake Design</em>" data-ar="تكوينات <em>تصميم الكيك</em>">Formations <em>Cake Design</em></h2>
+      <div class="section-line center"></div>
+    </div>
+    <div class="formations-grid reveal">
+      <!-- Card 1 -->
+      <div class="formation-card">
+        <div class="formation-img lux-img">
+          <img src="public/images/ghizlane/formation-stage-01.jpg" alt="">
+          <div class="shimmer"></div>
+        </div>
+        <div class="formation-body">
+          <div class="formation-level" data-fr="Niveau 1" data-ar="المستوى الأول">Niveau 1</div>
+          <h3 class="formation-title" data-fr="Initiation" data-ar="تكوين ابتدائي">Initiation</h3>
+          <ul class="formation-list">
+            <li><span data-fr="Techniques de base du Cake Design" data-ar="تقنيات أساسية لتصميم الكيك">Techniques de base du Cake Design</span></li>
+            <li><span data-fr="Montage et structure" data-ar="التركيب والهيكل">Montage et structure</span></li>
+            <li><span data-fr="Décoration fondamentale" data-ar="الديكور الأساسي">Décoration fondamentale</span></li>
+            <li><span data-fr="Organisation d'une commande" data-ar="تنظيم الطلبات">Organisation d'une commande</span></li>
+          </ul>
+          <div class="formation-btns">
+            <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20m'inscrire%20à%20la%20formation%20Initiation." target="_blank" class="btn-primary" style="justify-content:center;">
+              <span data-fr="S'inscrire" data-ar="سجّل الآن">S'inscrire</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="formation-card" style="border-color:var(--rosegold);box-shadow:var(--shadow-gold);">
+        <div style="position:absolute;top:20px;right:20px;background:linear-gradient(135deg,var(--rosegold),var(--brown-soft));color:white;font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;padding:6px 14px;border-radius:50px;z-index:10;" data-fr="Populaire" data-ar="الأكثر طلبًا">Populaire</div>
+        <div class="formation-img lux-img">
+          <img src="public/images/ghizlane/formation-stage-02.jpg" alt="">
+          <div class="shimmer"></div>
+        </div>
+        <div class="formation-body">
+          <div class="formation-level" data-fr="Niveau 2" data-ar="المستوى الثاني">Niveau 2</div>
+          <h3 class="formation-title" data-fr="Perfectionnement" data-ar="التحسين والتطوير">Perfectionnement</h3>
+          <ul class="formation-list">
+            <li><span data-fr="Décoration premium avancée" data-ar="ديكور متقدم وراقي">Décoration premium avancée</span></li>
+            <li><span data-fr="Finitions professionnelles" data-ar="لمسات احترافية">Finitions professionnelles</span></li>
+            <li><span data-fr="Conseils business" data-ar="نصائح تجارية">Conseils business</span></li>
+            <li><span data-fr="Accompagnement pratique" data-ar="مرافقة تطبيقية">Accompagnement pratique</span></li>
+          </ul>
+          <div class="formation-btns">
+            <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20m'inscrire%20à%20la%20formation%20Perfectionnement." target="_blank" class="btn-primary" style="justify-content:center;">
+              <span data-fr="S'inscrire" data-ar="سجّل الآن">S'inscrire</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="formation-card">
+        <div class="formation-img lux-img">
+          <img src="public/images/ghizlane/formation-stage-03.jpg" alt="">
+          <div class="shimmer"></div>
+        </div>
+        <div class="formation-body">
+          <div class="formation-level" data-fr="Niveau 3" data-ar="المستوى الثالث">Niveau 3</div>
+          <h3 class="formation-title" data-fr="Niveau professionnel" data-ar="المستوى الاحترافي">Niveau professionnel</h3>
+          <ul class="formation-list">
+            <li><span data-fr="Présentation et photographie" data-ar="العرض والتصوير">Présentation et photographie</span></li>
+            <li><span data-fr="Techniques maître" data-ar="تقنيات متقدمة">Techniques maître</span></li>
+            <li><span data-fr="Développement de collection" data-ar="تطوير المجموعات">Développement de collection</span></li>
+            <li><span data-fr="Coaching personnalisé" data-ar="تدريب مخصص">Coaching personnalisé</span></li>
+          </ul>
+          <div class="formation-btns">
+            <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20m'inscrire%20à%20la%20formation%20Niveau%20Professionnel." target="_blank" class="btn-primary" style="justify-content:center;">
+              <span data-fr="S'inscrire" data-ar="سجّل الآن">S'inscrire</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;" class="reveal">
+      <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20j'ai%20une%20question%20sur%20les%20formations." target="_blank" class="btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-fr="Poser une question sur WhatsApp" data-ar="اسأل عبر واتساب">Poser une question sur WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ORDER FORM
+     ============================================================ -->
+<section id="order">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <span class="section-label" data-fr="Sur mesure" data-ar="حسب الطلب">Sur mesure</span>
+      <h2 class="section-title" data-fr="Créez le gâteau de <em>votre événement</em>" data-ar="صمّم كيك <em>مناسبتكم</em>">Créez le gâteau de <em>votre événement</em></h2>
+      <div class="section-line center"></div>
+    </div>
+    <div class="order-wrap reveal">
+      <div class="order-grid">
+        <div class="field-group">
+          <label class="field-label" data-fr="Nom complet" data-ar="الاسم الكامل">Nom complet</label>
+          <input type="text" class="field-input" id="orderName" placeholder="Votre nom" data-ph-fr="Votre nom" data-ph-ar="اسمك الكامل">
+        </div>
+        <div class="field-group">
+          <label class="field-label" data-fr="Téléphone" data-ar="الهاتف">Téléphone</label>
+          <input type="tel" class="field-input" id="orderPhone" placeholder="0600000000" data-ph-fr="0600000000" data-ph-ar="0600000000">
+        </div>
+        <div class="field-group">
+          <label class="field-label" data-fr="Type d'événement" data-ar="نوع المناسبة">Type d'événement</label>
+          <input type="text" class="field-input" id="orderEvent" placeholder="Mariage, Anniversaire…" data-ph-fr="Mariage, Anniversaire…" data-ph-ar="زفاف، عيد ميلاد…">
+        </div>
+        <div class="field-group">
+          <label class="field-label" data-fr="Date de l'événement" data-ar="تاريخ المناسبة">Date de l'événement</label>
+          <input type="date" class="field-input" id="orderDate">
+        </div>
+        <div class="field-group">
+          <label class="field-label" data-fr="Nombre d'invités" data-ar="عدد المدعوين">Nombre d'invités</label>
+          <input type="number" class="field-input" id="orderGuests" placeholder="50" data-ph-fr="50" data-ph-ar="50">
+        </div>
+        <div class="field-group full">
+          <label class="field-label" data-fr="Message / Inspiration" data-ar="رسالة / إلهام">Message / Inspiration</label>
+          <textarea class="field-input" id="orderMsg" placeholder="Décrivez votre gâteau de rêve…" data-ph-fr="Décrivez votre gâteau de rêve…" data-ph-ar="صف كيك أحلامك…"></textarea>
+        </div>
+      </div>
+      <button class="btn-submit" onclick="submitOrder()" data-fr="Envoyer ma commande sur WhatsApp" data-ar="أرسل طلبي عبر واتساب">Envoyer ma commande sur WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PORTFOLIO
+     ============================================================ -->
+<section id="portfolio">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <span class="section-label" data-fr="Moodboard" data-ar="معرض الإلهام">Moodboard</span>
+      <h2 class="section-title" data-fr="Portfolio & <em>Inspirations</em>" data-ar="أعمالنا <em>وإلهاماتنا</em>">Portfolio & <em>Inspirations</em></h2>
+      <div class="section-line center"></div>
+    </div>
+    <div class="portfolio-grid reveal">
+      <div class="portfolio-item"><img src="public/images/ghizlane/portfolio-01.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="portfolio-item"><img src="public/images/ghizlane/portfolio-02.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="portfolio-item"><img src="public/images/ghizlane/portfolio-03.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="portfolio-item"><img src="public/images/ghizlane/portfolio-04.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="portfolio-item"><img src="public/images/ghizlane/portfolio-05.jpg" alt=""><div class="shimmer"></div></div>
+      <div class="portfolio-item"><img src="public/images/ghizlane/portfolio-06.jpg" alt=""><div class="shimmer"></div></div>
+    </div>
+    <div class="portfolio-cta reveal">
+      <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="btn-ig">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span data-fr="Voir plus sur Instagram" data-ar="المزيد على إنستغرام">Voir plus sur Instagram</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:52px;">
+      <span class="section-label" data-fr="Témoignages" data-ar="آراء العملاء">Témoignages</span>
+      <h2 class="section-title" data-fr="Ils nous font <em>confiance</em>" data-ar="ثقتهم <em>تلهمنا</em>">Ils nous font <em>confiance</em></h2>
+      <div class="section-line center"></div>
+    </div>
+    <div class="testimonials-slider reveal">
+      <div class="testimonials-track" id="testTrack">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="test-stars">
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="test-text" data-fr="Une pièce montée absolument somptueuse pour notre mariage. Tous nos invités étaient émerveillés. Ghizlane a dépassé toutes nos attentes avec son talent et sa délicatesse." data-ar="قطعة رائعة تمامًا لحفل زفافنا. أُعجب بها جميع ضيوفنا. تجاوزت غزلان كل توقعاتنا بموهبتها ورقتها.">Une pièce montée absolument somptueuse pour notre mariage. Tous nos invités étaient émerveillés.</p>
+            <div class="test-name">Fatima & Youssef</div>
+            <div class="test-role" data-fr="Meknès — Mariage" data-ar="مكناس — زفاف">Meknès — Mariage</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="test-stars">
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="test-text" data-fr="La formation Perfectionnement est exceptionnelle. Ghizlane partage son savoir avec passion et générosité. Je recommande à 100% pour toutes celles qui souhaitent se perfectionner." data-ar="تكوين التطوير استثنائي. غزلان تشارك معرفتها بشغف وكرم. أوصي به 100% لكل من يرغب في الاحتراف.">La formation Perfectionnement est exceptionnelle. Ghizlane partage son savoir avec passion et générosité.</p>
+            <div class="test-name">Nadia B.</div>
+            <div class="test-role" data-fr="Rabat — Formation" data-ar="الرباط — تكوين">Rabat — Formation</div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="test-stars">
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="test-text" data-fr="Le gâteau Baby Shower était à couper le souffle. Une présentation digne des plus belles pâtisseries parisiennes, avec une saveur incomparable." data-ar="كيك بيبي شاور كان خيالياً. تقديم يليق بأرقى المحلات الباريسية، مع نكهة لا مثيل لها.">Le gâteau Baby Shower était à couper le souffle. Une présentation digne des plus belles pâtisseries parisiennes.</p>
+            <div class="test-name">Salma K.</div>
+            <div class="test-role" data-fr="Casablanca — Baby Shower" data-ar="الدار البيضاء — بيبي شاور">Casablanca — Baby Shower</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="test-stars">
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="test-star" viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="test-text" data-fr="Service impeccable, créations uniques et une touche personnelle qui fait toute la différence. Ghizlane est une vraie artiste du sucre." data-ar="خدمة لا تشوبها شائبة، إبداعات فريدة ولمسة شخصية تصنع الفرق. غزلان فنانة حقيقية للحلوى.">Service impeccable, créations uniques et une touche personnelle qui fait toute la différence.</p>
+            <div class="test-name">Imane L.</div>
+            <div class="test-role" data-fr="Fès — Anniversaire" data-ar="فاس — عيد ميلاد">Fès — Anniversaire</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-nav reveal" id="testNav"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT / SOCIAL
+     ============================================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:52px;">
+      <span class="section-label" data-fr="Réseaux & Contact" data-ar="التواصل والمتابعة">Réseaux & Contact</span>
+      <h2 class="section-title" data-fr="Nous <em>suivre</em>" data-ar="تابعونا <em>ومتابعتنا</em>">Nous <em>suivre</em></h2>
+      <div class="section-line center"></div>
+    </div>
+    <div class="contact-center reveal">
+      <div class="contact-brand">Ghizlane Prestige</div>
+      <div class="contact-phone">0693 600 606</div>
+      <div class="contact-ig">@ghizlane_prestige8</div>
+    </div>
+    <div class="social-grid reveal">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <div class="social-name">WhatsApp</div>
+        <div class="social-handle">0693 600 606</div>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        <div class="social-name">Instagram</div>
+        <div class="social-handle">@ghizlane_prestige8</div>
+      </a>
+      <!-- Facebook -->
+      <a href="https://web.facebook.com/ghizlane.lechhab.75" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </div>
+        <div class="social-name">Facebook</div>
+        <div class="social-handle">ghizlane.lechhab</div>
+      </a>
+      <!-- TikTok -->
+      <a href="https://vm.tiktok.com/JY7TKvb" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.41a8.16 8.16 0 004.77 1.52V7.46a4.85 4.85 0 01-1-.77z"/></svg>
+        </div>
+        <div class="social-name">TikTok</div>
+        <div class="social-handle">@ghizlane_prestige</div>
+      </a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@Ghizlane362" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </div>
+        <div class="social-name">YouTube</div>
+        <div class="social-handle">@Ghizlane362</div>
+      </a>
+      <!-- Google Maps -->
+      <a href="https://maps.app.goo.gl/jNjx8sCarM89BK1Z6" target="_blank" class="social-card">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="var(--rosegold)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div class="social-name" data-fr="Localisation" data-ar="الموقع">Localisation</div>
+        <div class="social-handle" data-fr="Meknès, Maroc" data-ar="مكناس، المغرب">Meknès, Maroc</div>
+      </a>
+    </div>
+    <div class="contact-wa-cta reveal" style="text-align:center;">
+      <a href="https://wa.me/212693600606?text=Bonjour%20Ghizlane%20Prestige%2C%20je%20souhaite%20vous%20contacter." target="_blank" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-fr="Contacter sur WhatsApp" data-ar="تواصل عبر واتساب">Contacter sur WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Ghizlane Prestige</div>
+        <div class="footer-tagline" data-fr="Cake Artiste · Instructrice Cake Design" data-ar="فنانة الكيك · مدربة تصميم الكيك">Cake Artiste · Instructrice Cake Design</div>
+        <div class="footer-line"></div>
+        <p class="footer-desc" data-fr="Créations personnalisées, formations professionnelles et pâtisserie raffinée à Meknès, Maroc." data-ar="إبداعات مخصصة، تكوينات احترافية ومعجنات راقية في مكناس، المغرب.">Créations personnalisées, formations professionnelles et pâtisserie raffinée à Meknès, Maroc.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/212693600606" target="_blank" class="footer-social-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank" class="footer-social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://web.facebook.com/ghizlane.lechhab.75" target="_blank" class="footer-social-btn">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://vm.tiktok.com/JY7TKvb" target="_blank" class="footer-social-btn">
+            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.41a8.16 8.16 0 004.77 1.52V7.46a4.85 4.85 0 01-1-.77z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@Ghizlane362" target="_blank" class="footer-social-btn">
+            <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-fr="Navigation" data-ar="التنقل">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#creations" data-fr="Créations" data-ar="الإبداعات">Créations</a></li>
+          <li><a href="#patisserie" data-fr="Pâtisserie" data-ar="المعجنات">Pâtisserie</a></li>
+          <li><a href="#formations" data-fr="Formations" data-ar="التكوينات">Formations</a></li>
+          <li><a href="#about" data-fr="À propos" data-ar="عني">À propos</a></li>
+          <li><a href="#portfolio" data-fr="Portfolio" data-ar="الأعمال">Portfolio</a></li>
+          <li><a href="#contact" data-fr="Contact" data-ar="تواصل">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" data-fr="Contact" data-ar="التواصل">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:0693600606">0693 600 606</a></li>
+          <li><a href="https://wa.me/212693600606" target="_blank">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/ghizlane_prestige8/" target="_blank">@ghizlane_prestige8</a></li>
+          <li><a href="https://maps.app.goo.gl/jNjx8sCarM89BK1Z6" target="_blank" data-fr="Meknès, Maroc" data-ar="مكناس، المغرب">Meknès, Maroc</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Ghizlane Prestige. <span data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">Tous droits réservés.</span></span>
+      <span data-fr="Meknès, Maroc" data-ar="مكناس، المغرب">Meknès, Maroc</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ============================================================
+   ============================================================ */
+/* INTRO CANVAS — Dark Rose Particles */
+(function(){
+  var intro = document.getElementById('intro');
+  var canvas = document.getElementById('introCanvas');
+  if(!intro || !canvas) return;
+
+  var ctx = canvas.getContext('2d');
+  var particles = [];
+  var W, H, animId;
+
+  function resize(){
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for(var i = 0; i < 90; i++){
+    particles.push({
+      x: Math.random()*W,
+      y: Math.random()*H,
+      r: Math.random()*2.2+0.5,
+      alpha: Math.random()*0.55+0.2,
+      vx: (Math.random()-0.5)*0.25,
+      vy: (Math.random()-0.5)*0.25,
+      color: ['#ff2f86','#b51655','#d58a6b','#ffffff'][Math.floor(Math.random()*4)]
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    particles.forEach(function(p){
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.color;
+      ctx.fill();
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if(p.x < 0) p.x = W;
+      if(p.x > W) p.x = 0;
+      if(p.y < 0) p.y = H;
+      if(p.y > H) p.y = 0;
+    });
+    ctx.globalAlpha = 1;
+    animId = requestAnimationFrame(draw);
+  }
+
+  draw();
+
+  setTimeout(function(){
+    intro.style.transition = 'opacity .8s ease';
+    intro.style.opacity = '0';
+    intro.style.pointerEvents = 'none';
+
+    setTimeout(function(){
+      cancelAnimationFrame(animId);
+      intro.remove();
+    }, 900);
+  }, 2500);
+})();
+
+/* ============================================================
+   HEADER SCROLL
+   ============================================================ */
+window.addEventListener('scroll', function(){
+  var h = document.getElementById('header');
+  if(window.scrollY > 50){
+    h.classList.add('scrolled');
+  } else {
+    h.classList.remove('scrolled');
+  }
+});
+
+/* ============================================================
+   MOBILE MENU
+   ============================================================ */
+function toggleMenu(){
+  var m = document.getElementById('mobileMenu');
+  var h = document.getElementById('hamburger');
+  m.classList.toggle('open');
+  h.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+/* ============================================================
+   HERO SLIDER
+   ============================================================ */
+(function(){
+  var slides = document.querySelectorAll('.hero-slide');
+  var dotsContainer = document.getElementById('heroDots');
+  var current = 0;
+  var timer;
+
+  slides.forEach(function(_, i){
+    var dot = document.createElement('div');
+    dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', function(){ goTo(i); });
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(n){
+    slides[current].classList.remove('active');
+    dotsContainer.children[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dotsContainer.children[current].classList.add('active');
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  function next(){ goTo(current + 1); }
+  timer = setInterval(next, 5000);
+})();
+
+/* ============================================================
+   TESTIMONIALS SLIDER
+   ============================================================ */
+(function(){
+  var track = document.getElementById('testTrack');
+  var slides = track ? track.querySelectorAll('.testimonial-slide') : [];
+  var nav = document.getElementById('testNav');
+  var current = 0;
+  var timer;
+
+  if(!slides.length) return;
+
+  slides.forEach(function(_, i){
+    var dot = document.createElement('button');
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Slide ' + (i+1));
+    dot.addEventListener('click', function(){ goTo(i); });
+    nav.appendChild(dot);
+  });
+
+  function goTo(n){
+    nav.children[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    nav.children[current].classList.add('active');
+    clearInterval(timer);
+    timer = setInterval(next, 6000);
+  }
+
+  function next(){ goTo(current + 1); }
+  timer = setInterval(next, 6000);
+})();
+
+/* ============================================================
+   VIDEO PLACEHOLDER
+   ============================================================ */
+(function(){
+  var video = document.getElementById('patisserieVideo');
+  var placeholder = document.getElementById('videoPlaceholder');
+  if(!video || !placeholder) return;
+
+  video.addEventListener('error', function(){
+    video.style.display = 'none';
+    placeholder.style.display = 'flex';
+  });
+
+  video.addEventListener('loadeddata', function(){
+    placeholder.style.display = 'none';
+  });
+
+  if(video.readyState >= 2){
+    placeholder.style.display = 'none';
+  }
+})();
+
+/* ============================================================
+   ORDER FORM → WHATSAPP
+   ============================================================ */
+function submitOrder(){
+  var lang = document.documentElement.lang;
+  var name = document.getElementById('orderName').value.trim();
+  var phone = document.getElementById('orderPhone').value.trim();
+  var event = document.getElementById('orderEvent').value.trim();
+  var date = document.getElementById('orderDate').value;
+  var guests = document.getElementById('orderGuests').value.trim();
+  var msg = document.getElementById('orderMsg').value.trim();
+
+  if(!name && !phone){
+    var alertMsg = lang === 'ar' ? 'يرجى إدخال اسمك ورقم هاتفك.' : 'Veuillez entrer votre nom et votre téléphone.';
+    alert(alertMsg);
+    return;
+  }
+
+  var text;
+  if(lang === 'ar'){
+    text = 'مرحباً غزلان بريستيج،\nأريد تقديم طلب:\n\n';
+    text += 'الاسم: ' + (name||'-') + '\n';
+    text += 'الهاتف: ' + (phone||'-') + '\n';
+    text += 'نوع المناسبة: ' + (event||'-') + '\n';
+    text += 'تاريخ المناسبة: ' + (date||'-') + '\n';
+    text += 'عدد المدعوين: ' + (guests||'-') + '\n';
+    text += 'الرسالة: ' + (msg||'-');
+  } else {
+    text = 'Bonjour Ghizlane Prestige,\nJe souhaite passer une commande:\n\n';
+    text += 'Nom: ' + (name||'-') + '\n';
+    text += 'Téléphone: ' + (phone||'-') + '\n';
+    text += 'Événement: ' + (event||'-') + '\n';
+    text += 'Date: ' + (date||'-') + '\n';
+    text += 'Invités: ' + (guests||'-') + '\n';
+    text += 'Message: ' + (msg||'-');
+  }
+
+  var url = 'https://wa.me/212693600606?text=' + encodeURIComponent(text);
+  window.open(url, '_blank');
+}
+
+/* ============================================================
+   LANGUAGE SWITCHER
+   ============================================================ */
+var translations = {
+  fr: {
+    'Nom complet': 'Nom complet',
+    'Téléphone': 'Téléphone',
+    "Type d'événement": "Type d'événement",
+    "Date de l'événement": "Date de l'événement",
+    "Nombre d'invités": "Nombre d'invités",
+    'Message / Inspiration': 'Message / Inspiration'
+  },
+  ar: {
+    'Nom complet': 'الاسم الكامل',
+    'Téléphone': 'الهاتف',
+    "Type d'événement": 'نوع المناسبة',
+    "Date de l'événement": 'تاريخ المناسبة',
+    "Nombre d'invités": 'عدد المدعوين',
+    'Message / Inspiration': 'رسالة / إلهام'
+  }
+};
+
+function setLang(lang){
+  localStorage.setItem('gp_lang', lang);
+
+  var html = document.documentElement;
+  html.lang = lang;
+  html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+  document.body.classList.toggle('ar', lang === 'ar');
+
+  document.getElementById('btnFr').classList.toggle('active', lang === 'fr');
+  document.getElementById('btnAr').classList.toggle('active', lang === 'ar');
+
+  // Translate all [data-fr] / [data-ar] elements
+  var els = document.querySelectorAll('[data-fr],[data-ar]');
+  els.forEach(function(el){
+    var txt = el.getAttribute('data-' + lang);
+    if(!txt) return;
+
+    if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'){
+      // placeholders handled separately
+    } else if(el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'LI'){
+      if(txt.indexOf('<em>') !== -1){
+        el.innerHTML = txt;
+      } else {
+        el.textContent = txt;
+      }
+    }
+  });
+
+  // Handle placeholders
+  var inputs = document.querySelectorAll('[data-ph-fr],[data-ph-ar]');
+  inputs.forEach(function(el){
+    var ph = el.getAttribute('data-ph-' + lang);
+    if(ph) el.placeholder = ph;
+  });
+}
+
+// Init language from localStorage
+(function(){
+  var saved = localStorage.getItem('gp_lang') || 'fr';
+  if(saved === 'ar'){
+    setLang('ar');
+  }
+})();
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+(function(){
+  var revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(function(el){
+    observer.observe(el);
+  });
+})();
+
+/* ============================================================
+   IMAGE FALLBACK — Hide broken img tags gracefully
+   ============================================================ */
+(function(){
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error', function(){
+      img.style.display = 'none';
+    });
+  });
+})();
+
+/* ============================================================
+   CLOSE MOBILE MENU ON OUTSIDE CLICK
+   ============================================================ */
+document.addEventListener('click', function(e){
+  var menu = document.getElementById('mobileMenu');
+  var hamburger = document.getElementById('hamburger');
+  if(menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)){
+    closeMenu();
+  }
+});
+
+/* ============================================================
+   FORMATION CARD POPULAR BADGE POSITION FIX
+   ============================================================ */
+(function(){
+  var cards = document.querySelectorAll('.formation-card');
+  cards.forEach(function(c){
+    c.style.position = 'relative';
+  });
+})();
+</script>
+</body>
+</html>
